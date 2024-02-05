@@ -1,0 +1,12 @@
+.ui.large.fluid.icon.input {
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 50%;
+}
+
+.circular.search.link.icon {
+  margin-top: 10px;
+}
+

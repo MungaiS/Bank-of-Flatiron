@@ -1,29 +1,17 @@
-import React from 'react';
-import Transaction from './Transaction';
+import React from "react";
+import Transaction from "./Transaction";
+import "./TransactionsList.css";
 
-function TransactionsList({ transactions, handleDeleteTransaction, handleAddForm}) {
+function TransactionsList({ transactions, handleDeleteTransaction }) {
 
   const deleteTransaction = async (transId) => {
-		console.log(transId);
-		try {
-			const res = await fetch("http://localhost:8001/transactions/" + transId, {
-				method: "DELETE",
-			});
-			handleDeleteTransaction(transId);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-  
- 
-  
+    handleDeleteTransaction(transId);
+  };
+
   return (
-    <table onAddItem= {handleAddForm} className='ui celled striped padded table'>
+    <table className='ui celled striped padded table'>
       <tbody>
         <tr>
-        {/* <th>
-            <h3 className="ui center aligned header">#Ref</h3>
-          </th> */}
           <th>
             <h3 className='ui center aligned header'>Date</h3>
           </th>

@@ -1,45 +1,51 @@
 import React, { useState, useEffect } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
-import AddTransaction from "./AddTransaction";
+import AddTransactionForm from "./AddTransactionForm";
+import "./AccountContainer.css";
 
-function AccountContainer({handleDeleteTransaction}) {
-	 //fetch data
+function AccountContainer() {
+  //fetch data
   //GET request
-  const [transactions, listTransactions] = useState([]);
+  const [transactions, setTransactions] = useState([]);
   useEffect(() => {
     fetch('http://localhost:8001/transactions')
       .then((response) => response.json())
-      .then((transacs) => listTransactions(transacs))
+      .then((transacs) => setTransactions(transacs))
       .catch((err) => console.log(err));
   }, []);
 
-  function handleAddForm(newForm) {
-    listTransactions([...transactions, newForm]);
+  const handleAddForm = (newForm) => {
+    setTransactions([...transactions, newForm]);
   }
 
-  
-
   function handleSearch(e) {
-    listTransactions((transactions) => {
+    setTransactions((transactions) => {
       return transactions.filter((transaction) => {
         return transaction.description.toLowerCase().includes(e.target.value.toLowerCase());
       });
     });
   }
-	return (
-		<div>
-			<Search handleSearch={handleSearch} />
-			<AddTransaction
-				handleAddTransaction={handleAddForm}
-				transactions={transactions}
-			/>
-			<TransactionsList
-				transactions={transactions}
-				
-			/>
-		</div>
-	);
+
+  const handleDeleteTransaction = (transId) => {
+    fetch("http://localhost:8001/transactions/" + transId, {
+      method: "DELETE",
+    })
+      .then(() => {
+        setTransactions(transactions.filter((transaction) => transaction.id !== transId));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  return (
+    <div className="account-container">
+      <Search handleSearch={handleSearch} />
+      <AddTransactionForm handleAddTransaction={handleAddForm} transactions={transactions} />
+      <TransactionsList transactions={transactions} handleDeleteTransaction={handleDeleteTransaction} />
+    </div>
+  );
 }
 
 export default AccountContainer;

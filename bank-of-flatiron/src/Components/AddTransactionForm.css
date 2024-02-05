@@ -1,0 +1,20 @@
+.ui.form {
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 50%;
+}
+
+.ui.segment.violet.inverted {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #8e24aa;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ui.segment.violet.inverted:hover {
+  background-color: #7a1987;
+}

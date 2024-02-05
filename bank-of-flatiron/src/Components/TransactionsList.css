@@ -1,0 +1,28 @@
+.ui.celled.striped.padded.table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.ui.celled.striped.padded.table th,
+.ui.celled.striped.padded.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.ui.celled.striped.padded.table th {
+  background-color: #f2f2f2;
+}
+
+.ui.segment.violet.inverted {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #8e24aa;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ui.segment.violet.inverted:hover {
+  background-color: #7a1987;
+}

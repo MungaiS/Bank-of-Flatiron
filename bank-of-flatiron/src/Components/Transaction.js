@@ -1,4 +1,5 @@
 import React from "react";
+import "./Transaction.css"; 
 
 function Transaction({
   transaction: { id, date, description, category, amount},
