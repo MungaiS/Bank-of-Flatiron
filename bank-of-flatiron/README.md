@@ -1,4 +1,4 @@
-# React Bank Transactions App
+# Bank of Flatiron App
 
 ## Table of Contents
 1. [Getting Started](#getting-started)
@@ -16,17 +16,18 @@
 
 ## Getting Started
 
-To get started with the React Bank Transactions App, follow these steps:
+To get started with the Bank of Flatiron App, follow these steps:
 
 1. Clone the repository: 
    ```bash
-   git clone https://github.com/your-username/react-bank-transactions-app.git
+   git clone https://github.com/MungaiS/Bank-of-Flatiron.git
 
 
-Clone the repository: git clone https://github.com/your-username/react-bank-transactions-app.git
-Navigate to the project directory: cd react-bank-transactions-app
+Clone the repository: git clone https://github.com/MungaiS/Bank-of-Flatiron.git
+Navigate to the project directory: cd bank-of-flatiron
 Install dependencies: npm install
 Start the application: npm start
+
 ## Features
 1. View Transactions
 
@@ -53,9 +54,9 @@ Users can delete a transaction, removing it from the table.
 
 ## Installation
 1. Clone the repository:
- git clone https://github.com/your-username/react-bank-transactions-app.git
+ git clone https://github.com/MungaiS/Bank-of-Flatiron.git
 2. Navigate to the project directory: 
- cd react-bank-transactions-app
+ cd bank-of-flatiron
 3. Install dependencies:
  npm install
 
