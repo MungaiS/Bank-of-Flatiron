@@ -1,0 +1,13 @@
+.ui.segment.violet.inverted {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #245eaa;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ui.segment.violet.inverted:hover {
+  background-color: #245eaa;
+  
+}
